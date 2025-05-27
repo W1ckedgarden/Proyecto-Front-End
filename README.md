@@ -1,3 +1,3 @@
 # Proyecto-Front-End
-# En desarrollo 
-## Mi primera pagina Web
+# En desarrollo.
+## Mi primera pagina Web.
