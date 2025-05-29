@@ -1,134 +1,169 @@
-/* --- ESTILOS GENERALES --- */
+/* --- ESTILOS GENERALES: En estos bloques de estilo defino el comportamiento de desplazamiento, la familia de fuentes, margen y padding del cuerpo en general. --- */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 0;
-    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  /* Familia de fuentes para el cuerpo del documento */
+    margin: 0;  /* Elimina el margen por defecto del cuerpo */
+    padding: 0;  /* Elimina el padding por defecto del cuerpo */
 }
 
-/* --- HEADER --- */
+/* --- HEADER: En este bloque de estilo defino el diseño, color y bordes del encabezado principal de la página. --- */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    border: 1px solid orangered;
-    border-radius: 5px;
+    background-color: #333;  /* Color de fondo del encabezado */
+    color: white;  /* Color del texto del encabezado */
+    padding: 10px 0;  /* Espaciado interno del encabezado */
+    text-align: center;  /* Alineación del texto al centro */
+    border: 1px solid orangered;  /* Borde del encabezado */
+    border-radius: 5px;  /* Bordes redondeados del encabezado */
 }
 
-/* --- LOGO (dentro de header) --- */
+/* --- LOGO (dentro de header): En este bloque de estilo defino el tamaño, forma y borde de la imagen del logo en el encabezado. --- */
 .logo img {
-    width: 120px;
-    height: 100px;
-    object-fit: cover;
-    object-position: 50% 30%;
-    border-radius: 60%;
-    border: 1px solid black;
-    max-width: 100px;
+    width: 120px;  /* Ancho de la imagen del logo */
+    height: 100px;  /* Alto de la imagen del logo */
+    object-fit: cover;  /* Ajusta la imagen para cubrir el área del contenedor */
+    object-position: 50% 30%;  /* Posiciona la imagen en el centro horizontalmente y un poco más arriba verticalmente */
+    border-radius: 60%;  /* Bordes redondeados de la imagen del logo */
+    border: 1px solid black;  /* Borde de la imagen del logo */
+    max-width: 100px;  /* Ancho máximo de la imagen del logo */
 }
 
 
-/* --- NAVEGACIÓN --- */
+/* --- NAVEGACIÓN: En estos bloques de estilo defino la apariencia y disposición de la barra de navegación y sus enlaces. --- */
+nav {
+    background-color: #222;  /* Color de fondo de la barra de navegación */
+    padding: 10px 0;  /* Espaciado interno de la barra de navegación */
+    border-radius: 0 0 5px 5px;  /* Bordes redondeados en la parte inferior de la barra de navegación */
+    margin-top: 10px;  /* Margen superior para separar la barra de navegación del encabezado */
+}
+
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none;  /* Elimina los puntos de la lista */
+    margin: 0;  /* Elimina el margen de la lista */
+    padding: 0;  /* Elimina el padding de la lista */
+    text-align: center;  /* Centra los elementos de la lista */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: inline-block;  /* Muestra los elementos de la lista en línea */
 }
 
 nav ul li a {
-    color: blanchedalmond;
-    text-decoration: none;
+    color: blanchedalmond;  /* Color del texto de los enlaces */
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    font-weight: bold;  /* Hace el texto de los enlaces en negrita */
+    font-size: 1.1em;  /* Tamaño de fuente de los enlaces */
+    padding: 6px 12px;  /* Espaciado interno de los enlaces */
+    border-radius: 4px;  /* Bordes redondeados de los enlaces */
+    transition: background 0.2s, color 0.2s;  /* Transición suave para el cambio de fondo y color al pasar el mouse */
 }
 
-/* --- BANNER --- */
+nav ul li a:hover,  /* Efecto hover: Cambia el fondo y color del enlace al pasar el mouse */
+nav ul li a:focus {  /* Efecto focus: Cambia el fondo y color del enlace al hacer clic */
+    background: orangered;  /* Color de fondo al pasar el mouse o hacer clic */
+    color: white;  /* Color del texto al pasar el mouse o hacer clic */
+}
+
+/* --- BANNER: En estos bloques de estilo defino el fondo, bordes y tipografía del banner de bienvenida. --- */
 .banner {
-    background-color: grey;
-    padding: 20px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 5px;
+    background-color: grey;  /* Color de fondo del banner */
+    padding: 20px;  /* Espaciado interno del banner */
+    text-align: center;  /* Alineación del texto al centro */
+    border: 2px solid black;  /* Borde del banner */
+    border-radius: 5px;  /* Bordes redondeados del banner */
 }
 
 .banner h1 {
-    color: pink;
-    font-style: italic;
-    font-size: xx-large;
-    text-shadow: 1px 1px 2px black;
+    color: pink;  /* Color del texto del título */
+    font-style: italic;  /* Estilo de fuente en cursiva */
+    font-size: xx-large;  /* Tamaño de fuente del título */
+    text-shadow: 1px 1px 2px black;  /* Sombra del texto del título */
 }
 
 .banner p {
-    color: pink;
-    font-style: italic;
-    font-weight: bold;
-    font-size: large;
-    text-shadow: 1px 1px 2px black;
+    color: pink;  /* Color del texto del párrafo */
+    font-style: italic;  
+    font-weight: bold;  /* Negrita del texto del párrafo */
+    font-size: large;  /* Tamaño de fuente del párrafo */
+    text-shadow: 1px 1px 2px black;  /* Sombra del texto del párrafo */
 }
 
-/* --- CONTENIDO PRINCIPAL --- */
+/* --- CONTENIDO PRINCIPAL: En estos bloques de estilo defino el fondo, bordes y espaciado de la sección principal de contenido. --- */
 .contenido {
-    background-color: blanchedalmond;
-    padding: 25px;
-    border: 2px solid orangered;
-    border-radius: 5px;
+    background-color: blanchedalmond;  /* Color de fondo de la sección de contenido */
+    padding: 25px;  /* Espaciado interno de la sección de contenido */
+    border: 2px solid orangered;  /* Borde de la sección de contenido */
+    border-radius: 5px;  /* Bordes redondeados de la sección de contenido */
 }
 
 .contenido article h2 {
-    color: black;
-    font-weight: bold;
-    text-decoration: underline;
-    text-shadow: 1px 1px 2px gray;
+    color: black;  /* Color del texto de los títulos de los artículos */
+    font-weight: bold;  /* Negrita del texto de los títulos de los artículos */
+    text-decoration: underline;  /* Subrayado del texto de los títulos de los artículos */
+    text-shadow: 1px 1px 2px gray;  /* Sombra del texto de los títulos de los artículos */
 }
 
 .contenido article p {
-    color: gray;
-    font-weight: bold;
+    color: gray;  /* Color del texto de los párrafos de los artículos */
+    font-weight: bold;  /* Negrita del texto de los párrafos de los artículos */
 }
 
-/* --- IMÁGENES DE SECCIONES ESPECÍFICAS --- */
+/* --- IMÁGENES DE SECCIONES ESPECÍFICAS: En estos bloques de estilo defino los bordes y tamaños de las imágenes en cada sección. --- */
 .estudios img {
-    border: 1.5px solid black;
+    border: 1.5px solid black;  /* Borde de las imágenes en la sección de estudios */
 }
 
 .ultimo-trabajo img {
-    width: 1024px;
-    height: 682px;
+    width: 1024px;  /* Ancho de las imágenes en la sección del último trabajo */
+    height: 682px;  /* Alto de las imágenes en la sección del último trabajo */
 }
 
 .ubicacion img {
-    border: 1.5px solid black;
+    border: 1.5px solid black;  /* Borde de las imágenes en la sección de ubicación */
 }
 
-/* --- FOOTER --- */
+/* --- FOOTER: En este bloque de estilo defino el fondo, color, alineación y bordes del pie de página. --- */
 footer {
-    background-color: grey;
-    color: pink;
-    text-align: center;
-    padding: 10px 0;
-    border: 3px solid black;
-    border-radius: 5px;
+    background-color: grey;  /* Color de fondo del pie de página */
+    color: pink;  /* Color del texto del pie de página */
+    text-align: center;  /* Alineación del texto al centro */
+    padding: 10px 0;  /* Espaciado interno del pie de página */
+    border: 3px solid black;  /* Borde del pie de página */
+    border-radius: 5px;  /* Bordes redondeados del pie de página */
 }
 
-/* --- REDES SOCIALES EN FOOTER --- */
+/* --- REDES SOCIALES EN FOOTER: En estos bloques de estilo defino el tamaño, disposición y estilo de los iconos y enlaces de redes sociales en el pie de página. --- */
 .redes-sociales {
-    width: 30px;
-    margin: 10px;
+    width: 30px;  /* Ancho de la sección de redes sociales */
 }
 
 .redes-sociales a {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 10px;
-    color: inherit;
-    text-decoration: none;
-    font-weight: bold;
+    display: inline-flex;  /* Muestra los enlaces de redes sociales en línea */
+    align-items: center;  /* Alinea los elementos al centro verticalmente */
+    margin: 0 10px;  /* Margen horizontal entre los enlaces */
+    color: inherit;  /* Hereda el color del texto del pie de página */
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    font-weight: bold;  /* Hace el texto de los enlaces en negrita */
 }
 
 .redes-sociales img {
-    width: 30px;
-    height: 30px;
-    margin-right: 6px;
+    width: 30px;  /* Ancho de los iconos de redes sociales */
+    height: 30px;  /* Alto de los iconos de redes sociales */
+    margin-right: 6px;  /* Margen derecho de los iconos de redes sociales */
+}
+
+/* --- CRÉDITOS DE LAS IMÁGENES EN FOOTER: En estos bloques de estilo defino la apariencia, tamaño y color del texto de los créditos de las imágenes en el pie de página. --- */
+
+.creditos-imagenes {
+    font-size: 0.8em;  /* Tamaño de fuente más pequeño para los créditos de las imágenes */
+    color: blanchedalmond;  /* Color del texto de los créditos de las imágenes */
+    margin-top: 30px;  /* Margen superior para separar los créditos del resto del pie de página */
+}
+
+.creditos-imagenes a {
+    color: inherit;  /* Hereda el color del texto del pie de página */
+    text-decoration: none;  /* Elimina el subrayado de los enlaces de créditos */
 }
