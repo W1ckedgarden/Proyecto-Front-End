@@ -10,6 +10,14 @@ body {
     padding: 0;  /* Elimina el padding por defecto del cuerpo */
 }
 
+/* --- IMÁGENES RESPONSIVAS: En este bloque de estilo hago que todas las imágenes se ajusten al ancho del contenedor en pantallas pequeñas. --- */
+img {
+    max-width: 100%;  /* Ancho máximo de las imágenes al 100% del contenedor */
+    height: auto;  /* Mantiene la proporción de las imágenes */
+    display: block;  /* Hace que las imágenes se comporten como bloques */
+    margin: 0 auto;  /* Centra las imágenes horizontalmente */
+}
+
 /* --- HEADER: En este bloque de estilo defino el diseño, color y bordes del encabezado principal de la página. --- */
 header {
     background-color: #333;  /* Color de fondo del encabezado */
@@ -99,6 +107,13 @@ nav ul li a:focus {  /* Efecto focus: Cambia el fondo y color del enlace al hace
     border-radius: 5px;  /* Bordes redondeados de la sección de contenido */
 }
 
+.contenido article {
+    text-align: center;  /* Alineación del texto al centro en los artículos */
+    max-width: 1000px;  /* Limita el ancho máximo del artículo */
+    margin: 0 auto 30px auto;  /* Centra el artículo y agrega margen inferior */
+    padding: 0 10px;  /* Un poco de espacio interno lateral para móviles */
+}
+
 .contenido article h2 {
     color: black;  /* Color del texto de los títulos de los artículos */
     font-weight: bold;  /* Negrita del texto de los títulos de los artículos */
@@ -109,20 +124,31 @@ nav ul li a:focus {  /* Efecto focus: Cambia el fondo y color del enlace al hace
 .contenido article p {
     color: gray;  /* Color del texto de los párrafos de los artículos */
     font-weight: bold;  /* Negrita del texto de los párrafos de los artículos */
+    font-size: large;  /* Tamaño de fuente de los párrafos de los artículos */
 }
 
-/* --- IMÁGENES DE SECCIONES ESPECÍFICAS: En estos bloques de estilo defino los bordes y tamaños de las imágenes en cada sección. --- */
-.estudios img {
-    border: 1.5px solid black;  /* Borde de las imágenes en la sección de estudios */
+/* --- IMÁGENES DE SECCIONES UNIFICADAS: En este bloque de estilo defino el tamaño uniforme y el recorte de las imágenes de las secciones principales sin deformarlas. --- */
+.img-seccion {
+    width: 100%;  /* Ocupa todo el ancho del contenedor */
+    max-width: 700px;  /* Limita el ancho máximo para mantener la estética */
+    height: 340px;  /* Altura fija para uniformidad */
+    object-fit: cover;  /* Recorta la imagen para llenar el área sin deformarla */
+    object-position: center; /* Centra la imagen en el recorte */
+    border-radius: 10px;  /* Opcional: bordes redondeados */
+    display: block;  /* Hace que la imagen se comporte como un bloque */
+    margin: 0 auto 15px auto;  /* Centra la imagen y agrega margen inferior */
+    border: 1.5px solid black;  /* Borde de la imagen */
 }
 
-.ultimo-trabajo img {
-    width: 1024px;  /* Ancho de las imágenes en la sección del último trabajo */
-    height: 682px;  /* Alto de las imágenes en la sección del último trabajo */
-}
-
-.ubicacion img {
-    border: 1.5px solid black;  /* Borde de las imágenes en la sección de ubicación */
+/* --- IMAGEN VERTICAL SOBRE MÍ: En este bloque de estilo ajusto la imagen vertical para que se vea proporcional y centrada. --- */
+.img-dd {
+    width: 320px;  /* Igual ancho que las otras imágenes */
+    height: 260px;  /* Igual alto que las otras imágenes */
+    object-fit: contain;  /* Muestra toda la imagen sin recortar */
+    object-position: center;  /* Centra la imagen en el recorte */
+    display: block;  /* Hace que la imagen se comporte como un bloque */
+    margin: 0 auto 15px auto;  /* Centra la imagen y agrega margen inferior */
+    background: blanchedalmond;  /* Color de fondo para el contenedor de la imagen */
 }
 
 /* --- FOOTER: En este bloque de estilo defino el fondo, color, alineación y bordes del pie de página. --- */
@@ -155,9 +181,25 @@ footer {
     margin-right: 6px;  /* Margen derecho de los iconos de redes sociales */
 }
 
+/* --- CONTACTO Y REDES SOCIALES EN FOOTER: En este bloque de estilo defino la apariencia del contenedor de contacto y redes sociales en el pie de página. --- */
+.footer-contacto {
+    background-color: #444;  /* Color de fondo del contenedor de contacto */
+    padding: 15px 0;  /* Espaciado interno del contenedor de contacto */
+    border-radius: 5px;  /* Bordes redondeados del contenedor de contacto */
+    border: 1.5px solid black;  /* Borde del contenedor de contacto */
+    margin-bottom: 20px;  /* Margen inferior para separar del resto del pie de página */
+}
+
+.footer-contacto p {
+    margin: 8px 0;  /* Margen vertical de los párrafos dentro del contenedor de contacto */
+}
+
 /* --- CRÉDITOS DE LAS IMÁGENES EN FOOTER: En estos bloques de estilo defino la apariencia, tamaño y color del texto de los créditos de las imágenes en el pie de página. --- */
 
 .creditos-imagenes {
+    background-color: #333;  /* Color de fondo de la sección de créditos de imágenes */
+    border-radius: 5px;  /* Bordes redondeados de la sección de créditos de imágenes */
+    border: 1.5px solid orangered;  /* Borde de la sección de créditos de imágenes */
     font-size: 0.8em;  /* Tamaño de fuente más pequeño para los créditos de las imágenes */
     color: blanchedalmond;  /* Color del texto de los créditos de las imágenes */
     margin-top: 30px;  /* Margen superior para separar los créditos del resto del pie de página */
@@ -166,4 +208,14 @@ footer {
 .creditos-imagenes a {
     color: inherit;  /* Hereda el color del texto del pie de página */
     text-decoration: none;  /* Elimina el subrayado de los enlaces de créditos */
+}
+
+/* --- COPYRIGHT EN FOOTER: En este bloque de estilo defino la apariencia del aviso de copyright en el pie de página. --- */
+footer .copyright {
+    background-color: #333;  /* Color de fondo del aviso de copyright */
+    border-radius: 5px;  /* Bordes redondeados del aviso de copyright */
+    border: 1.5px solid orangered;  /* Borde del aviso de copyright */
+    font-size: 0.9em;  /* Tamaño de fuente del aviso de copyright */
+    color: #ccc;  /* Color del texto del aviso de copyright */
+    margin-top: 15px;  /* Margen superior para separar el aviso del resto del pie de página */
 }
