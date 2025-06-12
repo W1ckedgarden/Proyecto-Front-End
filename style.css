@@ -20,11 +20,11 @@ img {
 
 /* --- HEADER: En este bloque de estilo defino el diseño, color y bordes del encabezado principal de la página. --- */
 header {
-    background-color: #333;  /* Color de fondo del encabezado */
+    background-color: #ffe4ec;  /* Color de fondo del encabezado (Nuevo color) */
     color: white;  /* Color del texto del encabezado */
     padding: 10px 0;  /* Espaciado interno del encabezado */
     text-align: center;  /* Alineación del texto al centro */
-    border: 1px solid orangered;  /* Borde del encabezado */
+    border: 1px solid gray;  /* Borde del encabezado (Nuevo color) */
     border-radius: 5px;  /* Bordes redondeados del encabezado */
 }
 
@@ -35,14 +35,14 @@ header {
     object-fit: cover;  /* Ajusta la imagen para cubrir el área del contenedor */
     object-position: 50% 30%;  /* Posiciona la imagen en el centro horizontalmente y un poco más arriba verticalmente */
     border-radius: 60%;  /* Bordes redondeados de la imagen del logo */
-    border: 1px solid black;  /* Borde de la imagen del logo */
+    border: 1px solid gray;  /* Borde de la imagen del logo (Nuevo color) */
     max-width: 100px;  /* Ancho máximo de la imagen del logo */
 }
 
 
 /* --- NAVEGACIÓN: En estos bloques de estilo defino la apariencia y disposición de la barra de navegación y sus enlaces. --- */
 nav {
-    background-color: #222;  /* Color de fondo de la barra de navegación */
+    background-color: #ee2e68;  /* Color de fondo de la barra de navegación */
     padding: 10px 0;  /* Espaciado interno de la barra de navegación */
     border-radius: 0 0 5px 5px;  /* Bordes redondeados en la parte inferior de la barra de navegación */
     margin-top: 10px;  /* Margen superior para separar la barra de navegación del encabezado */
@@ -60,7 +60,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: blanchedalmond;  /* Color del texto de los enlaces */
+    color: #fffbe7;  /* Color del texto de los enlaces (Nuevo color) */
     text-decoration: none;  /* Elimina el subrayado de los enlaces */
     font-weight: bold;  /* Hace el texto de los enlaces en negrita */
     font-size: 1.1em;  /* Tamaño de fuente de los enlaces */
@@ -71,28 +71,27 @@ nav ul li a {
 
 nav ul li a:hover,  /* Efecto hover: Cambia el fondo y color del enlace al pasar el mouse */
 nav ul li a:focus {  /* Efecto focus: Cambia el fondo y color del enlace al hacer clic */
-    background: orangered;  /* Color de fondo al pasar el mouse o hacer clic */
+    background: gray;  /* Color de fondo al pasar el mouse o hacer clic (Nuev color) */
     color: white;  /* Color del texto al pasar el mouse o hacer clic */
 }
 
 /* --- BANNER: En estos bloques de estilo defino el fondo, bordes y tipografía del banner de bienvenida. --- */
 .banner {
-    background-color: grey;  /* Color de fondo del banner */
+    background: linear-gradient(90deg, #e75480 0%, #c7436d 100%);  /* Degradado de color de fondo del banner (Nuevo) */
+    color: #fffbe7;  /* Color del texto del banner (Nuevo color) */
     padding: 20px;  /* Espaciado interno del banner */
     text-align: center;  /* Alineación del texto al centro */
-    border: 2px solid black;  /* Borde del banner */
+    border: 2px solid #ffe4ec;  /* Borde del banner (Nuevo color) */
     border-radius: 5px;  /* Bordes redondeados del banner */
 }
 
 .banner h1 {
-    color: pink;  /* Color del texto del título */
     font-style: italic;  /* Estilo de fuente en cursiva */
     font-size: xx-large;  /* Tamaño de fuente del título */
     text-shadow: 1px 1px 2px black;  /* Sombra del texto del título */
 }
 
 .banner p {
-    color: pink;  /* Color del texto del párrafo */
     font-style: italic;  
     font-weight: bold;  /* Negrita del texto del párrafo */
     font-size: large;  /* Tamaño de fuente del párrafo */
@@ -101,9 +100,9 @@ nav ul li a:focus {  /* Efecto focus: Cambia el fondo y color del enlace al hace
 
 /* --- CONTENIDO PRINCIPAL: En estos bloques de estilo defino el fondo, bordes y espaciado de la sección principal de contenido. --- */
 .contenido {
-    background-color: blanchedalmond;  /* Color de fondo de la sección de contenido */
+    background-color: #e0ffe0;  /* Color de fondo de la sección de contenido (Nuevo color) */
     padding: 25px;  /* Espaciado interno de la sección de contenido */
-    border: 2px solid orangered;  /* Borde de la sección de contenido */
+    border: 2px solid gray;  /* Borde de la sección de contenido (Nuevo color) */
     border-radius: 5px;  /* Bordes redondeados de la sección de contenido */
 }
 
@@ -115,7 +114,7 @@ nav ul li a:focus {  /* Efecto focus: Cambia el fondo y color del enlace al hace
 }
 
 .contenido article h2 {
-    color: black;  /* Color del texto de los títulos de los artículos */
+    color: rgba(0, 0, 0, 0.616);  /* Color del texto de los títulos de los artículos (Nuevo color) */
     font-weight: bold;  /* Negrita del texto de los títulos de los artículos */
     text-decoration: underline;  /* Subrayado del texto de los títulos de los artículos */
     text-shadow: 1px 1px 2px gray;  /* Sombra del texto de los títulos de los artículos */
@@ -137,7 +136,6 @@ nav ul li a:focus {  /* Efecto focus: Cambia el fondo y color del enlace al hace
     border-radius: 10px;  /* Opcional: bordes redondeados */
     display: block;  /* Hace que la imagen se comporte como un bloque */
     margin: 0 auto 15px auto;  /* Centra la imagen y agrega margen inferior */
-    border: 1.5px solid black;  /* Borde de la imagen */
 }
 
 /* --- IMAGEN VERTICAL SOBRE MÍ: En este bloque de estilo ajusto la imagen vertical para que se vea proporcional y centrada. --- */
@@ -148,16 +146,16 @@ nav ul li a:focus {  /* Efecto focus: Cambia el fondo y color del enlace al hace
     object-position: center;  /* Centra la imagen en el recorte */
     display: block;  /* Hace que la imagen se comporte como un bloque */
     margin: 0 auto 15px auto;  /* Centra la imagen y agrega margen inferior */
-    background: blanchedalmond;  /* Color de fondo para el contenedor de la imagen */
+    background: #e0ffe0;  /* Color de fondo para el contenedor de la imagen (Nuevo color) */
 }
 
 /* --- FOOTER: En este bloque de estilo defino el fondo, color, alineación y bordes del pie de página. --- */
 footer {
-    background-color: grey;  /* Color de fondo del pie de página */
-    color: pink;  /* Color del texto del pie de página */
+    background: linear-gradient(90deg, #e75480 0%, #c7436d 100%);  /* Degradado de color de fondo del pie de página (Nuevo) */
+    color: #fffbe7;  /* Color del texto del pie de página */
     text-align: center;  /* Alineación del texto al centro */
     padding: 10px 0;  /* Espaciado interno del pie de página */
-    border: 3px solid black;  /* Borde del pie de página */
+    border: 3px solid #ffe4ec;  /* Borde del pie de página (Nuevo color) */
     border-radius: 5px;  /* Bordes redondeados del pie de página */
 }
 
@@ -181,27 +179,14 @@ footer {
     margin-right: 6px;  /* Margen derecho de los iconos de redes sociales */
 }
 
-/* --- CONTACTO Y REDES SOCIALES EN FOOTER: En este bloque de estilo defino la apariencia del contenedor de contacto y redes sociales en el pie de página. --- */
-.footer-contacto {
-    background-color: #444;  /* Color de fondo del contenedor de contacto */
-    padding: 15px 0;  /* Espaciado interno del contenedor de contacto */
-    border-radius: 5px;  /* Bordes redondeados del contenedor de contacto */
-    border: 1.5px solid black;  /* Borde del contenedor de contacto */
-    margin-bottom: 20px;  /* Margen inferior para separar del resto del pie de página */
-}
-
-.footer-contacto p {
-    margin: 8px 0;  /* Margen vertical de los párrafos dentro del contenedor de contacto */
-}
-
 /* --- CRÉDITOS DE LAS IMÁGENES EN FOOTER: En estos bloques de estilo defino la apariencia, tamaño y color del texto de los créditos de las imágenes en el pie de página. --- */
 
 .creditos-imagenes {
-    background-color: #333;  /* Color de fondo de la sección de créditos de imágenes */
+    background-color: #e0ffe0;  /* Color de fondo de la sección de créditos de imágenes (Nuevo color) */
     border-radius: 5px;  /* Bordes redondeados de la sección de créditos de imágenes */
-    border: 1.5px solid orangered;  /* Borde de la sección de créditos de imágenes */
+    border: 1.5px solid #fffbe7;  /* Borde de la sección de créditos de imágenes (Cambio de color) */
     font-size: 0.8em;  /* Tamaño de fuente más pequeño para los créditos de las imágenes */
-    color: blanchedalmond;  /* Color del texto de los créditos de las imágenes */
+    color: rgba(0, 0, 0, 0.616);  /* Color del texto de los créditos de las imágenes (Nuevo color) */
     margin-top: 30px;  /* Margen superior para separar los créditos del resto del pie de página */
 }
 
@@ -212,10 +197,195 @@ footer {
 
 /* --- COPYRIGHT EN FOOTER: En este bloque de estilo defino la apariencia del aviso de copyright en el pie de página. --- */
 footer .copyright {
-    background-color: #333;  /* Color de fondo del aviso de copyright */
+    background-color: #e0ffe0;  /* Color de fondo del aviso de copyright (Nuevo color) */
     border-radius: 5px;  /* Bordes redondeados del aviso de copyright */
-    border: 1.5px solid orangered;  /* Borde del aviso de copyright */
+    border: 1.5px solid #fffbe7;  /* Borde del aviso de copyright (Nuevo color) */
     font-size: 0.9em;  /* Tamaño de fuente del aviso de copyright */
-    color: #ccc;  /* Color del texto del aviso de copyright */
+    color: rgba(0, 0, 0, 0.616);  /* Color del texto del aviso de copyright (Nuevo color) */
     margin-top: 15px;  /* Margen superior para separar el aviso del resto del pie de página */
+}
+
+/* --- BOTONES PARA AGREGAR A FAVORITOS (Nuevo en la página web): En este bloque de estilo defino la apriencia de los botones para agregar intereses. --- */
+.btn-favorito {
+    background-color: #e75480;  /* Color de fondo del botón */
+    color: white;  /* Color del texto del botón */
+    border: none;  /* Elimina el borde del botón */
+    border-radius: 5px;  /* Bordes redondeados del botón */
+    padding: 8px 18px;  /* Espaciado interno del botón */
+    font-size: 1em;  /* Tamaño de fuente del botón */
+    font-weight: bold;  /* Negrita para el texto del botón */
+    cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+    margin-bottom: 10px;  /* Margen inferior para separar el botón de otros elementos */
+    margin-top: 8px;  /* Margen superior para separar el botón de otros elementos */
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;  /* Transición suave para el cambio de fondo, color y sombra al pasar el mouse */
+    box-shadow: 0 1px 4px rgba(80, 80, 80, 0.07);  /* Sombra sutil para darle profundidad al botón */
+    outline: none;  /* Elimina el contorno del botón al hacer clic */
+}
+
+.btn-favorito:hover,  /* Efecto hover: Cambia el fondo y color del botón al pasar el mouse */
+.btn-favorito:focus {  /* Efecto focus: Cambia el fondo y color del botón al hacer clic */
+    background-color: #c7436d;  /* Color de fondo al pasar el mouse o hacer clic */
+    color: #fffbe7;  /* Color del texto al pasar el mouse o hacer clic */
+    box-shadow: 0 2px 8px rgba(231, 84, 128, 0.15);  /* Sombra más pronunciada al pasar el mouse o hacer clic */
+}
+
+/* --- LISTA DE INTERESES TIPO CARRITO DE COMPRAS EN MAIN (Nuevo en la página web): En este bloque de estilo defino la apariencia de la lista de intereses. --- */
+.favoritos-panel {
+    background: #f7f7fa;  /* Color de fondo suave para el panel de favoritos */
+    border: 1px solid #e0e0e0;  /* Borde del panel de favoritos */
+    border-radius: 8px;  /* Bordes redondeados del panel de favoritos */
+    margin: 30px auto 20px auto;  /* Centra el panel horizontalmente y agrega margen superior e inferior */
+    padding: 18px 24px;  /* Espaciado interno del panel de favoritos */
+    max-width: 400px;  /* Ancho máximo del panel de favoritos */
+    box-shadow: 0 2px 8px rgba(80, 80, 80, 0.07);  /* Sombra sutil para darle profundidad al panel de favoritos */
+}
+
+.favoritos-panel h3 {  
+    margin-top: 0;  /* Elimina el margen superior del título */
+    color: #c7436d;  /* Color del texto del título */
+    font-size: 1.2em;  /* Tamaño de fuente del título */
+    letter-spacing: 1px;  /* Espaciado entre letras del título */
+    text-align: center;  /* Centra el título del panel de favoritos */
+}
+
+#favoritos-lista {
+    list-style: none;  /* Elimina los puntos de la lista */
+    padding: 0;  /* Elimina el padding de la lista */
+    margin: 0;  /* Elimina el margen de la lista */
+}
+
+#favoritos-lista li {
+    background: #fff;  /* Color de fondo de los elementos de la lista */
+    border: 1px solid #c7436d;  /* Borde de los elementos de la lista */
+    color: #c7436d;  /* Color del texto de los elementos de la lista */
+    border-radius: 4px;  /* Bordes redondeados de los elementos de la lista */
+    padding: 7px 12px;  /* Espaciado interno de los elementos de la lista */
+    margin-bottom: 7px;  /* Margen inferior para separar los elementos de la lista */
+    font-size: 1em;  /* Tamaño de fuente de los elementos de la lista */
+    transition: background 0.2s, color 0.2s;  /* Transición suave para el cambio de fondo y color al pasar el mouse */
+}
+
+#favoritos-lista li:hover {  /* Efecto hover: Cambia el fondo y color del elemento al pasar el mouse */
+    background: #c7436d;  /* Color de fondo al pasar el mouse */
+    color: #fff;  /* Color del texto al pasar el mouse */
+}
+
+/* --- FORMULARIO DE CONTACTO EN MAIN (Nuevo en la página web):  En este bloque de estilo defino la apariencia del formulario de contacto. --- */
+.formulario-contacto {
+    background-color: #ffe4ec;  /* Color de fondo suave para la sección del formulario */
+    padding: 30px 20px;  /* Espaciado interno del formulario */
+    border: 1.5px solid #e75480;  /* Borde del formulario */
+    border-radius: 8px;  /* Bordes redondeados del formulario */
+    max-width: 600px;  /* Ancho máximo del formulario */
+    margin: 30px auto;  /* Centra el formulario horizontalmente y agrega margen superior e inferior */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);  /* Sombra sutil para darle profundidad al formulario */
+}
+
+.formulario-contacto h2 {
+    color: #e75480;  /* Color del título del formulario */
+    margin-bottom: 20px;  /* Margen inferior para separar el título del resto del formulario */
+    text-align: center;  /* Centra el título del formulario */
+}
+
+.formulario-contacto form {
+    display: flex;  /* Utiliza flexbox para el formulario */
+    flex-direction: column;  /* Dispone los elementos en columna */
+    align-items: center;  /* Centra los elementos horizontalmente */
+    gap: 12px;  /* Espacio entre los elementos del formulario */
+    background: none;  /* Elimina el fondo del formulario */
+    border: none;  /* Elimina el borde del formulario */
+    padding: 0;  /* Elimina el padding del formulario */
+    margin: 0;  /* Elimina el margen del formulario */
+}
+
+.formulario-contacto label {
+    align-self: flex-start;  /* Alinea las etiquetas al inicio del formulario */
+    font-weight: bold;  /* Negrita para las etiquetas */
+    color: #333;  /* Color del texto de las etiquetas */
+    margin-bottom: 2px;  /* Margen inferior para separar las etiquetas de los campos */
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto textarea {
+    width: 100%;  /* Ancho completo del campo de entrada */
+    max-width: 400px;  /* Ancho máximo para mantener la estética */
+    padding: 10px;  /* Espaciado interno de los campos */
+    border: 1px solid #e75480;  /* Borde de los campos */
+    border-radius: 5px;  /* Bordes redondeados de los campos */
+    background-color: #fff0f6; /* Fondo de las casillas */
+    font-size: 1em;  /* Tamaño de fuente de los campos */
+    margin-bottom: 8px;  /* Margen inferior para separar los campos */
+    box-sizing: border-box;  /* Incluye el padding y el borde en el ancho total del campo */
+    resize: none;  /* Permite redimensionar el área de texto */
+}
+
+.formulario-contacto textarea {
+    min-height: 80px;  /* Altura mínima del área de texto */
+    max-height: 200px;  /* Altura máxima del área de texto */
+    resize: vertical;  /* Permite redimensionar el área de texto verticalmente */
+}
+
+.formulario-contacto input[type="text"]:focus,
+.formulario-contacto input[type="email"]:focus,
+.formulario-contacto textarea:focus {
+    outline: 2px solid #e75480;  /* Resalta el campo al hacer foco */
+    background-color: #fff;  /* Cambia el fondo al blanco al hacer foco */
+}
+
+.formulario-contacto button[type="submit"] {
+    background-color: #e75480;  /* Color de fondo del botón */
+    color: white;  /* Color del texto del botón */
+    border: none;  /* Elimina el borde del botón */
+    border-radius: 5px;  /* Bordes redondeados del botón */
+    padding: 10px 30px;  /* Espaciado interno del botón */
+    font-size: 1em;  /* Tamaño de fuente del botón */
+    font-weight: bold;  /* Negrita para el texto del botón */
+    cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+    transition: background 0.2s;  /* Transición suave para el cambio de fondo al pasar el mouse */
+    margin-top: 10px;  /* Margen superior para separar el botón del resto del formulario */
+}
+
+.formulario-contacto button[type="submit"]:hover {
+    background-color: #c7436d;  /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Contador de caracteres para el textarea */
+#contador-caracteres {
+    font-size: 0.9em;  /* Tamaño de fuente del contador */
+    color: #888;  /* Color del texto del contador */
+    align-self: flex-end;  /* Alinea el contador al final del formulario */
+    margin-bottom: 5px;  /* Margen inferior para separar el contador del botón */
+}
+
+/* Mensajes del formulario de contacto */
+#msj-formulario {
+    margin-top: 15px;  /* Margen superior para separar los mensajes del formulario */
+    margin-bottom: 10px;  /* Margen inferior para separar los mensajes del formulario */
+    min-height: 24px; /* Espacio reservado para los mensajes */
+    font-size: 1em;  /* Tamaño de fuente de los mensajes */
+    text-align: left;  /* Alineación del texto de los mensajes */
+}
+
+#msj-formulario div {  
+    margin-bottom: 5px;  /* Margen inferior para separar los mensajes */
+    padding: 6px 10px;  /* Espaciado interno de los mensajes */
+    border-radius: 4px;  /* Bordes redondeados de los mensajes */
+}
+
+.mensaje-error {
+    background-color: #ffe0e0;  /* Color de fondo del mensaje de error */
+    color: #b30000;  /* Color del texto del mensaje de error */
+    border: 1px solid #ffb3b3;  /* Borde del mensaje de error */
+}
+
+.mensaje-exito {
+    background-color: #e0ffe0;  /* Color de fondo del mensaje de éxito */
+    color: #217a21;  /* Color del texto del mensaje de éxito */
+    border: 1px solid #b3ffb3;  /* Borde del mensaje de éxito */
+}
+
+.formulario-contacto.exito {
+    background-color: #e0ffe0;  /* Color de fondo del formulario al enviar con éxito */
+    transition: background-color 0.5s;  /* Transición suave para el cambio de fondo */
 }
