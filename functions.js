@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {  // Asegurarse de que
             if (mensajeValor && /^(\s|\S)\1*$/.test(mensajeValor)) errores.push('El mensaje no puede ser solo espacios o caracteres repetidos.');
 
             // Mostrar errores o éxito
-            const seccionFormulario = document.querySelector('.formulario-contacto');
+            const seccionFormulario = document.querySelector('.formulario-contacto');  // Asegurarse de que la sección del formulario exista
             if (errores.length > 0) {  // Si hay errores, mostrarlos
                 msjFormulario.innerHTML = errores.map(e => `<div class="mensaje-error">${e}</div>`).join('');  // Mostrar todos los errores juntos
             } else {  // Si no hay errores, mostrar mensaje de éxito
@@ -69,15 +69,27 @@ document.addEventListener('DOMContentLoaded', function() {  // Asegurarse de que
 
 // Funciones para manejar los botones de favoritos
 
-document.querySelectorAll('.btn-favorito').forEach(btn => {  // Asegurarse de que los botones existan
-    btn.addEventListener('click', function() {  // Escuchar el evento de clic en cada botón de favorito
-        const seccion = this.getAttribute('data-section');  // Obtener la sección asociada al botón
-        const lista = document.getElementById('favoritos-lista');  // Asegurarse de que la lista exista
+function mostrarAlertaFavoritos(mensaje) {  // Muestra una alerta temporal en la sección de favoritos
+    const alerta = document.getElementById('alerta-favoritos');  // Asegurarse de que el elemento exista
+    alerta.textContent = mensaje;  // Asignar el mensaje a la alerta
+    alerta.classList.add('alerta-favoritos-activa');  // Agregar clase para mostrar la alerta
+    setTimeout(() => {  // Ocultar la alerta después de 1.8 segundos
+        alerta.classList.remove('alerta-favoritos-activa');  // Eliminar clase para ocultar la alerta
+    }, 1800);  // Esperar 1800 milisegundos = 1.8 segundos antes de ocultar la alerta
+}
+
+document.querySelectorAll('.btn-favorito').forEach(btn => {  // Seleccionar todos los botones de favoritos
+    btn.addEventListener('click', function() {  // Agregar evento de clic a cada botón
+        const seccion = this.getAttribute('data-section');  // Obtener la sección del botón clicado
+        const lista = document.getElementById('favoritos-lista');  // Asegurarse de que la lista de favoritos exista
         // Evitar duplicados
         if (![...lista.children].some(li => li.textContent === seccion)) {  // Verificar si la sección ya está en la lista
             const li = document.createElement('li');  // Crear un nuevo elemento de lista
             li.textContent = seccion;  // Asignar el texto de la sección al elemento de lista
             lista.appendChild(li);  // Agregar el elemento de lista a la lista de favoritos
+            mostrarAlertaFavoritos('¡Interés agregado a la lista!');  // Mostrar alerta de éxito
+        } else {  // Si la sección ya está en la lista, mostrar alerta de duplicado
+            mostrarAlertaFavoritos('¡Ese interés ya está en tu lista!');  // Mostrar alerta de duplicado
         }
     });
 });
@@ -91,3 +103,5 @@ document.querySelectorAll('.btn-favorito').forEach(btn => {  // Asegurarse de qu
 // Limpia el formulario y reinicia el contador de caracteres.
 // Evita duplicados en la lista de favoritos al verificar si la sección ya está presente antes de agregarla.
 // Asegura que los elementos del DOM existan antes de intentar acceder a ellos para evitar errores.
+// Muestra una alerta temporal en la sección de favoritos cuando se agrega un interés.
+// Utiliza expresiones regulares para validar el formato de los campos de texto, como nombre, apellido y email.

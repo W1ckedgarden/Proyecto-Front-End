@@ -270,6 +270,36 @@ footer .copyright {
     color: #fff;  /* Color del texto al pasar el mouse */
 }
 
+/* --- ALERTA FAVORITOS (Nuevo en la página web): En este bloque se define el estilo de las alertas de la lista de intereses. */
+#alerta-favoritos {
+    display: none;  /* Oculta la alerta por defecto */
+    position: fixed;  /* Posiciona la alerta de forma fija en la pantalla */
+    top: 30px;  /* Posición desde la parte superior de la pantalla */
+    right: 30px;  /* Posición desde el lado derecho de la pantalla */
+    z-index: 9999;  /* Asegura que la alerta esté por encima de otros elementos */
+    min-width: 220px;  /* Ancho mínimo de la alerta */
+    text-align: center;  /* Alinea el texto al centro */
+    pointer-events: none;  /* Evita que la alerta interfiera con otros elementos interactivos */
+}
+
+.alerta-favoritos-activa {
+    display: block !important;  /* Muestra la alerta cuando está activa */
+    background: #e75480;  /* Color de fondo de la alerta */
+    color: #fffbe7;  /* Color del texto de la alerta */
+    padding: 12px 24px;  /* Espaciado interno de la alerta */
+    border-radius: 8px;  /* Bordes redondeados de la alerta */
+    box-shadow: 0 2px 8px rgba(80,80,80,0.15);  /* Sombra sutil para darle profundidad a la alerta */
+    font-weight: bold;  /* Negrita para el texto de la alerta */
+    animation: fadeAlerta 1.8s;  /* Animación de desvanecimiento para la alerta */
+}
+
+@keyframes fadeAlerta {  /* Animación de desvanecimiento para la alerta */
+    0% { opacity: 0; transform: translateY(-20px);}  /* Comienza invisible y desplazada hacia arriba */
+    10% { opacity: 1; transform: translateY(0);}  /* Alcanza su posición original y es completamente visible */
+    90% { opacity: 1; }  /* Se mantiene visible hasta casi el final de la animación */
+    100% { opacity: 0; transform: translateY(-20px);}  /* Termina invisible y desplazada hacia arriba */
+}
+
 /* --- FORMULARIO DE CONTACTO EN MAIN (Nuevo en la página web):  En este bloque de estilo defino la apariencia del formulario de contacto. --- */
 .formulario-contacto {
     background-color: #ffe4ec;  /* Color de fondo suave para la sección del formulario */
